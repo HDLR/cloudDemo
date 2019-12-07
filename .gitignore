@@ -1,0 +1,4 @@
+# Project exclude paths
+/business/business-api/target/
+/common/target/
+/eureka/target/

@@ -1,0 +1,27 @@
+# 数据源
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/business-server?serverTimezone=UTC&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    hikari:
+      connection-timeout: 20000
+      minimum-idle: 1
+      maximum-pool-size: 5
+      idle-timeout: 10000
+      auto-commit: true
+
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: localhost
+    non-secure-port: ${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    com.cloud.business.service.modules.dao: DEBUG
