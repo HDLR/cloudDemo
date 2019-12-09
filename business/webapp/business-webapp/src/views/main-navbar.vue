@@ -27,8 +27,7 @@
         </el-menu-item>
         <el-submenu index="3">
           <template slot="title">产品</template>
-          <el-menu-item index="2-1"><a href="//home.jinxin.cloud/" target="_blank">关于我们</a></el-menu-item>
-          <el-menu-item index="2-2"><a href="//home.jinxin.cloud/" target="_blank">大数据平台</a></el-menu-item>
+          <el-menu-item index="2-1"><a href="//www/" target="_blank">百度</a></el-menu-item>
         </el-submenu>
         <el-menu-item class="site-navbar__avatar" index="3">
           <el-dropdown :show-timeout="0" placement="bottom">
