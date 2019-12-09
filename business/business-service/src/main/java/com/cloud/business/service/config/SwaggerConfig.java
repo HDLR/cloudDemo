@@ -1,5 +1,5 @@
 /**
- * 2019 东方金信
+ * 2019 样例
  *
  *
  *
@@ -43,7 +43,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("东方金信")
+            .title("样例")
             .description("business文档")
             .termsOfServiceUrl("http://localhost:20001")
             .build();
