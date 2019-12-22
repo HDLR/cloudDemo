@@ -53,10 +53,10 @@
         this.$nextTick(() => {
           this.$refs['dataForm'].resetFields()
           if (this.dataForm.${pk.attrname}) {
-            this.$httpBusiness({
-              url: #[[this.$httpBusiness.adornUrl]]#(`/${project}/${moduleName}/${pathName}/info/#[[$]]#{this.dataForm.${pk.attrname}}`),
+            this.$httpTAG({
+              url: #[[this.$httpTAG.adornUrl]]#(`/${project}/${moduleName}/${pathName}/info/#[[$]]#{this.dataForm.${pk.attrname}}`),
               method: 'get',
-              #[[params: this.$httpBusiness.adornParams()]]#
+              #[[params: this.$httpTAG.adornParams()]]#
             }).then(({data}) => {
               if (data && data.code === 0) {
 #foreach($column in $columns)
@@ -73,10 +73,10 @@
       dataFormSubmit () {
         #[[this.$refs['dataForm'].validate((valid) => {]]#
           if (valid) {
-            this.$httpBusiness({
-              url: #[[this.$httpBusiness.adornUrl]]#(`/${project}/${moduleName}/${pathName}/${!this.dataForm.${pk.attrname} ? 'save' : 'update'}`),
+            this.$httpTAG({
+              url: #[[this.$httpTAG.adornUrl]]#(`/${project}/${moduleName}/${pathName}/${!this.dataForm.${pk.attrname} ? 'save' : 'update'}`),
               method: 'post',
-              #[[data: this.$httpBusiness.adornData({]]#
+              #[[data: this.$httpTAG.adornData({]]#
 #foreach($column in $columns)
 #if($column.columnName == $pk.columnName)
                 '${column.attrname}': this.dataForm.${column.attrname} || undefined,
